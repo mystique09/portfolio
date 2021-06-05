@@ -12,6 +12,29 @@ a {
   color: #000000;
 }
 
+.grid {
+  height: 100vh;
+  display: grid;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.rounded {
+  padding: 14px 30px;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
 .app {
   max-width: 1240px;
   margin: 0 auto;
@@ -35,8 +58,31 @@ a {
 }
 
 .home {
-  height: 100vh;
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  padding: 2rem;
+}
+
+.home > h2 {
+  font-size: 6rem;
+  grid-row: 1/2;
+}
+
+.home > .para > p {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  font-size: 2rem;
+  font-weight: 300;
+  color: gray;
+}
+
+.home  .para {
+  grid-column: 2/3;
+  padding: 0.5rem;
+}
+
+.home .para a {
+  background: #000000;
+  color: #ffffff;
+  border-radius: 8px;
 }
