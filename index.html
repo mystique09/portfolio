@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="container" id="app">
+      <div class="navbar">
+        <h1 class="logo">{BEN}</h1>
+        <ul class="links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact Me</a></li>
+        </ul>
+      </div>
+      <div class="home grid">
+        <h2>GARCIA, BENJIE BEN</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quos quod ab explicabo accusamus exercitationem eligendi. Consectetur architecto eaque quas distinctio sed officiis temporibus obcaecati tempora ducimus, molestiae, iste cupiditate?</p>
+        <input type="button" value="Browse">
+      </div>
+      <div class="projects grid">
+        <div class="card">
+          <h1>Portfolio</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur libero minima deserunt facere cum neque optio accusantium ullam, tempora, blanditiis laborum aspernatur accusamus ut soluta, ipsa officiis maiores quod est.</p>
+          <div class="links">
+            <a href="#">Demo</a>
+            <a href="#">Repo</a>
+          </div>
+        </div>
+        <div class="card">
+          <h1>Portfolio</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur libero minima deserunt facere cum neque optio accusantium ullam, tempora, blanditiis laborum aspernatur accusamus ut soluta, ipsa officiis maiores quod est.</p>
+          <div class="links">
+            <a href="#">Demo</a>
+            <a href="#">Repo</a>
+          </div>
+        </div>
+        <div class="card">
+          <h1>Portfolio</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur libero minima deserunt facere cum neque optio accusantium ullam, tempora, blanditiis laborum aspernatur accusamus ut soluta, ipsa officiis maiores quod est.</p>
+          <div class="links">
+            <a href="#">Demo</a>
+            <a href="#">Repo</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-me">
+        <form action="https://emailjs-backend.herokuapp.com/api" method="post">
+          <div class="details">
+            <div class="group-inputs">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" required="true" value="" />
+            </div>
+            <div class="group-inputs">
+              <label for="lastName">Last Name</label>
+              <input type="text" name="lastName" id="lastName" required="true" value="" />
+            </div>
+            <div class="group-inputs">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required="true" value="" />
+            </div>
+            <div class="group-inputs comment">
+              <label>Comment</label>
+              <textarea id="comment" rows="6" cols="40"></textarea>
+            </div>
+          </div>
+          <div class="group-inputs">
+           <div class="g-recaptcha" data-sitekey="6LdmlvwaAAAAAOf1D85N5RLmLvEdOh6Ca6MtNG-y"></div>
+            <button type="button" name="submit" id="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="footer">
+        <h2>{BEN}</h2>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Discord</a></li>
+          <li><a href="#">Github</a></li>
+        </ul>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
