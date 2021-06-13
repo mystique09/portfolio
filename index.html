@@ -4,16 +4,39 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <meta name="description" content="Hello, I am Benjie Ben from Philippines. I am a self-taught web developer, I started coding way back 2019. I am passionate in this career. ❤️">
+  <script src="https://kit.fontawesome.com/8fa8ba0057.js" crossorigin="anonymous"></script>
+  <title>Benjie Ben Garcia</title>
 </head>
 <body>
+  <div id="nav-mobile-modal" class="nav-mobile-modal flex-col hidden">
+    <div class="close">
+      <a href="#" class="close-link">&times;</a>
+    </div>
+    <ul class="flex-col">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Projects</a></li>
+     <!--<li class="special"><a href="#">Contact Me</a></li>-->
+    </ul>
+    <h3>My accounts</h3>
+    <ul class="socmed flex-row">
+      <li><a href="#"><i class="fab fa-github"></i></a></li>
+      <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+    </ul>
+  </div>
   <div class="container" id="app">
     <div class="navbar">
-      <h1 class="logo">{BEN}</h1>
+      <h1 class="logo">{ BEN }</h1>
+      <div class="menu hidden">
+        <a href="#nav-mobile-modal">
+          <i class="fa fa-bars"></i>
+        </a>
+        </div>
       <ul class="links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact Me</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="https://github.com/mystique09">Contact Me</a></li>
       </ul>
     </div>
     <div class="home flex-row">
@@ -30,7 +53,7 @@
         <img class="avatar" src="./assets/undraw_Browsing_online_re_umsa.png" alt="avatar" />
       </div>
     </div>
-    <div class="projects">
+    <div id="projects" class="projects">
       <h2>My Projects</h2>
       <div class="list flex-row">
         <div class="card">
@@ -68,7 +91,7 @@
             <img src="./assets/undraw_Browsing_online_re_umsa.png" alt="preview" />
           </div>
           <div class="container flex-col">
-            <h3>Cryptocurrency Website</h3>
+            <h3>Cryptocurrency</h3>
             <p>
               Cryptocurrency Website, made with SvelteJS and coin desk api for fetching the current value of cryptocurrencies.
             </p>
@@ -95,12 +118,15 @@
         </div>
       </div>
     </div>
-    <div class="footer flex-row">
-      <h2>{BEN}</h2>
+    <div id="footer" class="footer flex-row">
+      <h2>{ BEN }</h2>
       <ul class="flex-row">
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Discord</a></li>
-        <li><a href="#">Github</a></li>
+        <li>
+          <a href="#" class="flex-row"><i class="fab fa-github"></i> Github</a>
+        </li>
+        <li>
+          <a href="#" class="flex-row"><i class="fab fa-facebook"></i> Facebook</a>
+          </li>
       </ul>
     </div>
   </div>

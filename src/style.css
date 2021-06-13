@@ -8,6 +8,7 @@ body {
 
 ul {
   list-style: none;
+  position: relative;
 }
 
 a {
@@ -48,6 +49,10 @@ a {
   flex-wrap: wrap;
 }
 
+.hidden {
+  display: none;
+}
+
 #app {
   max-width: 1240px;
   margin: 0 auto;
@@ -58,6 +63,7 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem;
 }
 
 .navbar h1 {
@@ -118,8 +124,9 @@ a {
 .home .para > .link a {
   background: #ffffff;
   color: #000000;
-  box-shadow: -5px 10px 10px rgba(255,255,255,0.5);
+  box-shadow: -5px 5px 10px rgba(255,255,255,0.3);
   font-weight: 700;
+  padding: 12px 36px;
 }
 
 .home .image {
@@ -133,6 +140,7 @@ a {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  mix-blend-mode: multiply;
 }
 
 /* PROJECTS Section */
@@ -224,7 +232,7 @@ a {
 
 .footer {
   background: #000000;
-  padding: 0.5rem;
+  padding: 1rem;
   margin: 0 auto;
   align-self: center;
   justify-content: space-between;
@@ -240,6 +248,7 @@ a {
 
 .footer > ul {
   justify-content: space-between;
+  align-items: center;
   flex: 2;
   padding-right: 8px;
 }
@@ -248,4 +257,135 @@ a {
   color: #ffffff;
   letter-spacing: 3px;
   font-weight: 500;
+  gap: 6px;
+}
+
+/* NAV MOBILE Modal */
+.nav-mobile-modal {
+  position: fixed;
+  touch-action: none;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 75%;
+  z-index: 555;
+  background: #ffffff;
+  padding: 0.5rem;
+  justify-content: center;
+}
+
+.nav-mobile-modal .close {
+  align-self: flex-end;
+}
+
+.nav-mobile-modal .close a {
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+.nav-mobile-modal h3 {
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.nav-mobile-modal .special {
+  padding: 12px 28px;
+  background: #000000;
+  border-radius: 2px;
+}
+
+.nav-mobile-modal .special a {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.nav-mobile-modal ul {
+  margin-top: 4rem;
+  position: relative;
+  align-items: center;
+  gap: 4rem;
+  padding: 1rem;
+  height: 50%;
+  font-size: 1.3rem;
+}
+
+.nav-mobile-modal .socmed {
+  align-items: center;
+  justify-content: space-around;
+  gap: 4px;
+  font-size: 2rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 720px){
+  .navbar {
+    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .navbar .links {
+    display: none;
+  }
+  .navbar .menu {
+    display: block;
+  }
+  .home {
+    flex-direction: column-reverse;
+  }
+  .home .para {
+    width: 100%;
+    height: 50%;
+  }
+  
+  .home .para h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .home .para p {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .home .image {
+    width: 100%;
+    height: 50%;
+  }
+  
+  .projects .list {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .projects h2 {
+    font-size: 1.5rem;
+  }
+  .card .container h3 {
+    font-size: 1.2rem;
+  }
+  .card .container p {
+    font-size: 1rem;
+  }
+  
+  .footer {
+    
+  }
+  
+  .footer ul {
+    font-size: 0.8rem;
+    flex-direction: column-reverse;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 1rem;
+  }
+  
+  .footer ul li a {
+    align-items: flex-start;
+    gap: 6px;
+  }
+  
+  .contact-me-modal form {
+    width: 100%;
+  }
 }
