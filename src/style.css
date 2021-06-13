@@ -110,7 +110,7 @@ a {
   font-weight: 500;
   color: #e7e7e7;
   line-height: 1.7rem;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .home > .para .link {
@@ -140,7 +140,6 @@ a {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  mix-blend-mode: multiply;
 }
 
 /* PROJECTS Section */
