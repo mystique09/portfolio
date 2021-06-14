@@ -6,6 +6,25 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(197, 197, 233);
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(135, 195, 235);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 ul {
   list-style: none;
   position: relative;
@@ -63,7 +82,7 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.2rem;
 }
 
 .navbar h1 {
@@ -88,7 +107,7 @@ a {
   justify-content: space-around;
   padding: 2rem;
   background: #000000;
-  max-width: 1110px;
+  max-width: 12400px;
   height: 100vh;
   gap: 1rem;
 }
@@ -111,10 +130,12 @@ a {
   color: #e7e7e7;
   line-height: 1.7rem;
   letter-spacing: 2px;
+  max-width: 450px;
 }
 
 .home > .para .link {
-  align-self: center;
+  align-self: flex-end;
+  justify-self: flex-end;
 }
 
 .home  .para {
@@ -131,6 +152,7 @@ a {
 
 .home .image {
   width: 50%;
+  max-width: 450px;
   height: 350px;
   border-radius: 8px;
   overflow: hidden;
@@ -144,10 +166,6 @@ a {
 
 /* PROJECTS Section */
 
-.projects {
-  
-}
-
 .projects h2 {
   font-size: 4rem;
   text-align: center;
@@ -155,17 +173,12 @@ a {
 }
 
 .projects > .list {
-  /*
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: 2fr;
-  grid-auto-rows: 1fr;
-  grid-gap: 0.7rem;
-  padding: 2rem;
-  */
   flex-wrap: wrap;
   gap: 0.9rem;
-  padding: 1rem;
+  padding: 0;
   padding-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -173,8 +186,7 @@ a {
   background: rgba(0,0,0,10);
   height: 400px;
   box-shadow: -5px 5px 5px rgba(0,0,0,0.5);
-  
-  width: 300px;
+  width: 280px;
   position: relative;
   overflow: hidden;
   border-radius: 8px;
@@ -229,18 +241,125 @@ a {
   border-radius: 4px;
 }
 
-.footer {
-  background: #000000;
+.showcase {
+  grid-template-columns: 550px 1fr;
+  background: linear-gradient(170deg, #181616, #2e2d2d);
+  place-items: center;
+}
+
+.showcase .skills {
+  align-items: center;
+  background: #dedede;
+  border-radius: 6px;
+  padding: 2rem;
+}
+
+.showcase .skills h3 {
+  font-size: 3rem;
+}
+
+.showcase .skills ul {
+  font-size: 2rem;
   padding: 1rem;
+  gap: 1rem;
+}
+
+.showcase .contact-me {
+  background: linear-gradient(140deg, #c5dfff, #6aa2e6);
+  border-radius: 6px;
+  width: 90%;
+}
+
+.showcase .contact-me .wrapper {
+  padding: 2rem;
+}
+
+.showcase .contact-me .wrapper h3 {
+  font-size: 3rem;
+  color: rgb(33, 59, 129);
+  text-align: center;
+}
+
+.showcase .contact-me .wrapper form {
+  align-self: center;
+}
+
+.showcase .contact-me .wrapper form div .input {
+  gap: 20px;
+  border-radius: 120px;
+  background: white;
+  padding: 5px 20px;
+  width: 80%;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.showcase .contact-me .wrapper form div .input span {
+  border-radius: 100%;
+  background: #eceaea;
+  padding: 9px;
+  width: 25px;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.showcase .contact-me .wrapper form div .input input {
+  width: 100%;
+  border: none;
+  padding: 5px;
+  font-size: 1rem;
+  margin-right: auto;
+  font-weight: 700;
+}
+
+.showcase .contact-me .wrapper form div .input input:focus {
+  outline: none;
+}
+
+.showcase .contact-me .wrapper form .message {
+  border-radius: 8px;
+  resize: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.showcase .contact-me .wrapper form .message:focus {
+  outline: none;
+}
+
+.showcase .contact-me .wrapper form .submit-btn {
+  margin: 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.showcase .contact-me .wrapper form .submit-btn .submit {
+  padding: 10px 25px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 700;
+  background: rgb(33, 59, 129);
+  color: white;
+}
+
+.footer {
+  padding: 0.2rem;
   margin: 0 auto;
   align-self: center;
   justify-content: space-between;
-  max-width: 1110px;
+  max-width: 1240px;
 }
 
 .footer h2 {
   font-size: 1rem;
-  color: #ffffff;
+  color: #000000;
   flex: 4;
   letter-spacing: 3px;
 }
@@ -253,7 +372,7 @@ a {
 }
 
 .footer > ul > li > a{
-  color: #ffffff;
+  color: #000000;
   letter-spacing: 3px;
   font-weight: 500;
   gap: 6px;
@@ -320,7 +439,7 @@ a {
 }
 
 /* MEDIA QUERY */
-@media only screen and (max-width: 720px){
+@media only screen and (max-width: 780px){
   .navbar {
     padding: 0;
     padding-left: 1rem;
@@ -356,6 +475,7 @@ a {
   .projects .list {
     align-items: center;
     flex-direction: column-reverse;
+    width: 100%;
   }
   .projects h2 {
     font-size: 1.5rem;
@@ -366,11 +486,7 @@ a {
   .card .container p {
     font-size: 1rem;
   }
-  
-  .footer {
-    
-  }
-  
+
   .footer ul {
     font-size: 0.8rem;
     flex-direction: column-reverse;
@@ -386,5 +502,17 @@ a {
   
   .contact-me-modal form {
     width: 100%;
+  }
+  .showcase {
+    height: 150vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 450px 1fr;
+  }
+}
+
+@media only screen and(max-width: 420px) {
+  .projects .list {
+    padding: 0;
+    margin: 0;
   }
 }
