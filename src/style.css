@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
 
+:root {
+  --primary: rgb(33, 59, 129);
+  --secondary: rgb(197, 197, 233);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -86,7 +91,7 @@ a {
 }
 
 .navbar h1 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   letter-spacing: 2px;
 }
 
@@ -100,16 +105,17 @@ a {
   padding: 1rem;
   font-weight: 500;
   letter-spacing: 3px;
+  font-size: 0.8rem;
 }
 
 .home {
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 2rem;
   background: #000000;
   max-width: 12400px;
   height: 100vh;
-  gap: 1rem;
+  /*gap: 1rem;*/
 }
 
 .home .para {
@@ -127,14 +133,15 @@ a {
 .home > .para > p {
   font-size: 1.2rem;
   font-weight: 500;
-  color: #e7e7e7;
+  color: var(--secondary);
   line-height: 1.7rem;
   letter-spacing: 2px;
   max-width: 450px;
+  margin-bottom: 50px;
 }
 
 .home > .para .link {
-  align-self: flex-end;
+  align-self: flex-start;
   justify-self: flex-end;
 }
 
@@ -215,7 +222,7 @@ a {
 }
 
 .projects > .list > .card > .container > p {
-  color: #dedede;
+  color: var(--secondary);
   letter-spacing: 3px;
   height: 60px;
   margin-top: 20px;
@@ -242,9 +249,10 @@ a {
 }
 
 .showcase {
-  grid-template-columns: 550px 1fr;
+  grid-template-columns: repeat(2,minmax(450px, 1fr));
   background: linear-gradient(170deg, #181616, #2e2d2d);
   place-items: center;
+  place-content: center;
 }
 
 .showcase .skills {
@@ -265,9 +273,10 @@ a {
 }
 
 .showcase .contact-me {
-  background: linear-gradient(140deg, #c5dfff, #6aa2e6);
+  background: linear-gradient(140deg, var(--primary), var(--primary));
   border-radius: 6px;
-  width: 90%;
+  width: 80%;
+  margin-right: 20px;
 }
 
 .showcase .contact-me .wrapper {
@@ -276,8 +285,9 @@ a {
 
 .showcase .contact-me .wrapper h3 {
   font-size: 3rem;
-  color: rgb(33, 59, 129);
+  color: #ffffff;
   text-align: center;
+  padding: 0;
 }
 
 .showcase .contact-me .wrapper form {
@@ -326,6 +336,7 @@ a {
   font-weight: 700;
   width: 90%;
   margin: 0 auto;
+  border: none;
 }
 
 .showcase .contact-me .wrapper form .message:focus {
@@ -335,7 +346,8 @@ a {
 .showcase .contact-me .wrapper form .submit-btn {
   margin: 10px;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .showcase .contact-me .wrapper form .submit-btn .submit {
@@ -345,8 +357,16 @@ a {
   outline: none;
   font-size: 1rem;
   font-weight: 700;
-  background: rgb(33, 59, 129);
-  color: white;
+  background: white;
+  color: var(--primary);
+  transition: 0.3s;
+}
+
+.showcase .contact-me .wrapper form .submit-btn .submit:hover {
+  cursor: pointer;
+  background: #000000;
+  color: var(--secondary);
+  transition: 0.3s;
 }
 
 .footer {
@@ -439,7 +459,7 @@ a {
 }
 
 /* MEDIA QUERY */
-@media only screen and (max-width: 780px){
+@media only screen and (max-width: 900px){
   .navbar {
     padding: 0;
     padding-left: 1rem;
