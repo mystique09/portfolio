@@ -1,4 +1,4 @@
-import './style.css'
+import './sass-style.scss'
 
 const menu = document.querySelector<HTMLDivElement>('.menu')!;
 const mobileNav = document.querySelector<HTMLDivElement>('.nav-mobile-modal')!;
@@ -12,24 +12,25 @@ closeNavModal.onclick = function(){
   mobileNav.classList.add('hidden');
 }
 
-console.log('rendered')
-
 /*contact form*/
 
 const form = document.querySelector<HTMLDivElement>('#app > div.showcase.grid > div.contact-me > div > form')!;
 
-form.onsubmit = function(e?: any){
+const submit = document.getElementById<HTMLDivElement>('submit');
+
+submit.onsubmit = function(e?: any){
 
   e.preventDefault();
 
-  const [firstname, lastname]: string = e.target[0].value.split(' ')!;
-  const email: string = e.target[1]!.value!;
-  const message: string = e.target[2].value!;
+  const [firstName, lastName] = document.getElementById<HTMLDivElement>('fullname').value.split(' ')!;
+  const email: string = document.getElementById<HTMLDivElement>('email').value!;
+  const message: string = document.getElementById<HTMLDivElement>('email').value!;
   const captchaResponse: string = grecaptcha.getResponse();
+  
+  alert(JSON.stringify({firstName, lastName, email, message, captchaResponse}))
 
   if(!captchaResponse){
     alert('Complete the captha!');
-    return;
   }
 
   fetch('https://emailjs-backend.herokuapp.com/api', {
@@ -40,19 +41,19 @@ form.onsubmit = function(e?: any){
         'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify({
-        firstname,
-        lastname,
+        firstName,
+        lastName: lastName || "nolastname",
         email, 
-        message, 
+        comment: message, 
         captcha: captchaResponse
       })
     }).then((response?: any) => {
       if(response.body === "OK"){
         alert('received!');
-        return;
+        alert(JSON.stringify(response.body))
       }
       alert('error');
     }).catch(() => {
       alert('Unable to send!');
     });
-}
+};
