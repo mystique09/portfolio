@@ -14,18 +14,21 @@ closeNavModal.onclick = function(){
 
 /*contact form*/
 
-const form = document.querySelector<HTMLDivElement>('#app > div.showcase.grid > div.contact-me > div > form')!;
+const form = document.querySelector<HTMLFormElement>('#app > div.showcase.grid > div.contact-me > div > form')!;
 
-const submit = document.getElementById<HTMLDivElement>('submit');
+const submitBtn = document.getElementById('submit')!;
 
-submit.onsubmit = function(e?: any){
+submitBtn.addEventListener('click', function(e?: any){
 
   e.preventDefault();
 
-  const [firstName, lastName] = document.getElementById<HTMLDivElement>('fullname').value.split(' ')!;
-  const email: string = document.getElementById<HTMLDivElement>('email').value!;
-  const message: string = document.getElementById<HTMLDivElement>('email').value!;
-  const captchaResponse: string = grecaptcha.getResponse();
+  const fullname = document.getElementById('fullname')!;
+  const [firstName, lastName] = fullname.value.split(' ');
+  const email: string = document.getElementById('email')!.value;
+  const message: string = document.getElementById('email')!.value;
+  const captchaResponse = grecaptcha.getResponse;
+
+  console.log(email, firstName, lastName, message, captchaResponse)
   
   alert(JSON.stringify({firstName, lastName, email, message, captchaResponse}))
 
@@ -56,4 +59,4 @@ submit.onsubmit = function(e?: any){
     }).catch(() => {
       alert('Unable to send!');
     });
-};
+});

@@ -94,6 +94,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem;
+  height: 70px;
 
   h1 {
     font-size: 1rem;
@@ -108,8 +109,14 @@ a {
     a {
       padding: 1rem;
       font-weight: 500;
-      letter-spacing: 3px;
-      font-size: 2rem;
+      letter-spacing: 2px;
+      font-size: 1rem;
+      transition: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+      &:hover {
+        color: $primary;
+        transition: 0.3s;
+      }
     }
   }
 
@@ -123,7 +130,7 @@ a {
   align-items: center;
   justify-content: space-evenly;
   padding: 2rem;
-  background: #000000;
+  background: #ffffff;
   max-width: 12400px;
   height: 100vh;
   /*gap: 1rem;*/
@@ -135,14 +142,14 @@ a {
 
     h2 {
       font-size: 2rem;
-      color: #ffffff;
+      color: #000000;
       letter-spacing: 3px;
     }
 
     p {
       font-size: 1.2rem;
       font-weight: 500;
-      color: $secondary;
+      color: #383737;
       line-height: 1.7rem;
       letter-spacing: 2px;
       max-width: 450px;
@@ -153,11 +160,18 @@ a {
       align-self: flex-start;
 
       a {
-        background: #ffffff;
-        color: #000000;
+        background: #000000;
+        color: #ffffff;
         box-shadow: -5px 5px 10px rgba(255,255,255,0.3);
         font-weight: 500;
         font-size: 0.8rem;
+        transition: 0.3s;
+
+        &:hover {
+          background: $primary;
+          color: #ffffff;
+          transition: 0.3s;
+        }
       }
     }
   }
@@ -185,7 +199,7 @@ a {
 }
 
 .projects {
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
   h2 {
     font-size: 4rem;
     text-align: center;
@@ -266,19 +280,22 @@ a {
 
 
 .showcase {
-  background: linear-gradient(170deg, #181616, #2e2d2d);
+  //background: linear-gradient(170deg, #181616, #2e2d2d);
   overflow: hidden;
   padding: 3rem 1rem;
 
   .skills {
     align-items: center;
-    background: #282828;
+    background: #eaeaea;
     padding: 2rem;
     width: 40%;
+    max-width: 720px;
+    margin: 0 auto;
 
     h3 {
       font-size: 3rem;
-      color: #ffffff;
+      color: #000000;
+      letter-spacing: 1px;
     }
 
     ul {
@@ -290,6 +307,8 @@ a {
   .contact-me {
     background: #000000;
     width: 60%;
+    max-width: 720px;
+    margin: 0 auto;
 
     .wrapper {
       padding: 2rem;
@@ -299,6 +318,7 @@ a {
         color: #ffffff;
         text-align: center;
         padding: 0;
+        letter-spacing: 1px;
       }
 
       form {
@@ -381,7 +401,7 @@ a {
 
 
 .footer {
-  padding: 0.2rem;
+  padding: 0.4rem;
   margin: 0 auto;
   align-self: center;
   justify-content: space-between;
@@ -396,10 +416,10 @@ a {
   }
 
   ul {
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex: 2;
-    padding-right: 8px;
+    //padding-right: 8px;
 
     li {
       a {
@@ -407,7 +427,7 @@ a {
         letter-spacing: 3px;
         font-weight: 500;
         gap: 6px;
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
     }
   }
@@ -492,22 +512,6 @@ a {
 /* medium (tablets) */
 
 @media only screen and (max-width: 576px) {
-  .navbar {
-    padding: 0.5rem;
-    align-items: center;
-
-    .logo {
-      padding: 0;
-    }
-
-    .links {
-      display: none;
-    }
-
-    .menu {
-      display: block;
-    }
-  }
   .home {
     flex-direction: column-reverse;
 
@@ -559,6 +563,32 @@ a {
     }
   }
 
+  .contact-me-modal form {
+    width: 100%;
+  }
+
+}
+
+/* large (desktops) */
+
+@media only screen and (max-width: 992px) {
+  .navbar {
+    padding: 0.5rem;
+    align-items: center;
+
+    .logo {
+      padding: 0;
+    }
+
+    .links {
+      display: none;
+    }
+
+    .menu {
+      display: block;
+    }
+  }
+
   .footer ul {
     font-size: 0.8rem;
     flex-direction: column-reverse;
@@ -572,10 +602,6 @@ a {
         gap: 6px;
       }
     }
-  }
-
-  .contact-me-modal form {
-    width: 100%;
   }
 
   .showcase {
@@ -600,10 +626,6 @@ a {
     }
   }
 }
-
-/* large (desktops) */
-
-@media only screen and (max-width: 992px) {}
 
 /* extra large (lwrge desktops) */
 
