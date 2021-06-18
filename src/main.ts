@@ -1,5 +1,5 @@
 import './sass-style.scss'
-import Alert from './Alert';
+import Alert from './alert';
 
 const menu = document.querySelector<HTMLDivElement>('.menu')!;
 const mobileNav = document.querySelector<HTMLDivElement>('.nav-mobile-modal')!;
