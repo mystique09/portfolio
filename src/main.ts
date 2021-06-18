@@ -1,8 +1,16 @@
 import './sass-style.scss'
+import Alert from './Alert';
 
 const menu = document.querySelector<HTMLDivElement>('.menu')!;
 const mobileNav = document.querySelector<HTMLDivElement>('.nav-mobile-modal')!;
 const closeNavModal = document.querySelector<HTMLDivElement>('.nav-mobile-modal > .close')!;
+const alertError = new Alert('Unable to send message.', false).create();
+const captchaError = new Alert('Complete the captcha first!', false).create();
+const alertSuccess = new Alert('Message received!', true).create();
+
+document.body.appendChild(captchaError);
+document.body.appendChild(alertError);
+document.body.appendChild(alertSuccess);
 
 menu.onclick = function(){
   mobileNav.classList.remove('hidden');
@@ -14,26 +22,22 @@ closeNavModal.onclick = function(){
 
 /*contact form*/
 
-const form = document.querySelector<HTMLFormElement>('#app > div.showcase.grid > div.contact-me > div > form')!;
-
 const submitBtn = document.getElementById('submit')!;
 
 submitBtn.addEventListener('click', function(e?: any){
 
   e.preventDefault();
 
-  const fullname = document.getElementById('fullname')!;
+  const fullname = (<HTMLInputElement>document.getElementById('fullname')!);
   const [firstName, lastName] = fullname.value.split(' ');
-  const email: string = document.getElementById('email')!.value;
-  const message: string = document.getElementById('email')!.value;
-  const captchaResponse = grecaptcha.getResponse;
-
-  console.log(email, firstName, lastName, message, captchaResponse)
+  const email: string = (<HTMLInputElement>document.getElementById('email')!).value;
+  const message: string = (<HTMLTextAreaElement>document.getElementById('message')!).value;
+  const captchaResponse = grecaptcha.getResponse();
   
-  alert(JSON.stringify({firstName, lastName, email, message, captchaResponse}))
-
   if(!captchaResponse){
-    alert('Complete the captha!');
+    captchaError.classList.remove('hidden');
+    setTimeout(()=> captchaError.classList.add('hidden'), 3000);
+    return;
   }
 
   fetch('https://emailjs-backend.herokuapp.com/api', {
@@ -51,12 +55,20 @@ submitBtn.addEventListener('click', function(e?: any){
         captcha: captchaResponse
       })
     }).then((response?: any) => {
-      if(response.body === "OK"){
-        alert('received!');
-        alert(JSON.stringify(response.body))
+      if(response.statusText === "OK"){
+        alertSuccess.classList.remove('hidden');
+        setTimeout(()=> alertSuccess.classList.add('hidden'), 3000);
+        setTimeout(()=> location.reload(), 3000);
+        return;
       }
-      alert('error');
+      alertError.classList.remove('hidden');
+      setTimeout(()=> alertError.classList.add('hidden'), 3000);
+      setTimeout(()=> location.reload(), 3000);
+      return;
     }).catch(() => {
-      alert('Unable to send!');
+      alertError.classList.remove('hidden');
+      setTimeout(()=> alertError.classList.add('hidden'), 3000);
+      setTimeout(()=> location.reload(), 3000);
+      return;
     });
 });
