@@ -4,13 +4,6 @@ import Alert from './alert';
 const menu = document.querySelector<HTMLDivElement>('.menu')!;
 const mobileNav = document.querySelector<HTMLDivElement>('.nav-mobile-modal')!;
 const closeNavModal = document.querySelector<HTMLDivElement>('.nav-mobile-modal > .close')!;
-const alertError = new Alert('Unable to send message.', false).create();
-const captchaError = new Alert('Complete the captcha first!', false).create();
-const alertSuccess = new Alert('Message received!', true).create();
-
-document.body.appendChild(captchaError);
-document.body.appendChild(alertError);
-document.body.appendChild(alertSuccess);
 
 menu.onclick = function(){
   mobileNav.classList.remove('hidden');
@@ -19,6 +12,15 @@ menu.onclick = function(){
 closeNavModal.onclick = function(){
   mobileNav.classList.add('hidden');
 }
+
+/* Alerts */
+const alertError = new Alert('Unable to send message.', false).create();
+const captchaError = new Alert('Complete the captcha first!', false).create();
+const alertSuccess = new Alert('Message received!', true).create();
+
+document.body.appendChild(captchaError);
+document.body.appendChild(alertError);
+document.body.appendChild(alertSuccess);
 
 /*contact form*/
 
