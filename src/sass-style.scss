@@ -1,12 +1,15 @@
 $primary: rgb(33, 59, 129);
 $secondary: rgb(197, 197, 233);
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 32px;
-  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -83,6 +86,19 @@ a {
 .hidden {
   display: none;
   transition: 0.3s;
+}
+
+.disable {
+  background: rgba(0,0,0,0.5);
+  color: white;
+}
+
+.text-md {
+  font-size: 4rem;
+}
+
+.text-lg {
+  font-size: 6rem;
 }
 
 #app {
@@ -214,6 +230,7 @@ a {
 
     .link {
       align-self: flex-start;
+      margin-top: 2rem;
 
       a {
         background: #000000;
@@ -221,6 +238,7 @@ a {
         box-shadow: -5px 5px 10px rgba(255,255,255,0.3);
         font-weight: 500;
         font-size: 1rem;
+        border-radius: 2px;
         transition: 0.3s;
 
         &:hover {
@@ -256,7 +274,9 @@ a {
 
 .projects {
   padding-bottom: 3rem;
+  
   h2 {
+    margin-top: 5rem;
     font-size: 4rem;
     text-align: center;
     letter-spacing: 3px;
@@ -274,7 +294,7 @@ a {
       background: rgba(0,0,0,10);
       //height: 400px;
       box-shadow: -5px 5px 5px rgba(0,0,0,0.5);
-      width: 280px;
+      width: 300px;
       position: relative;
       overflow: hidden;
       border-radius: 8px;
@@ -496,7 +516,7 @@ a {
   top: 0;
   right: 0;
   height: 100vh;
-  width: 75%;
+  width: 100%;
   z-index: 555;
   background: #ffffff;
   padding: 0.5rem;
@@ -534,7 +554,7 @@ a {
     margin-top: 4rem;
     position: relative;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
     padding: 1rem;
     height: 50%;
     font-size: 1.3rem;
@@ -547,9 +567,17 @@ a {
     font-size: 2rem;
     margin-top: 0;
     padding-top: 0;
+    
+    li {
+      align-items: center;
+      
+      span {
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+    }
   }
 }
-
 
 /* MEDIA QUERIES */
 
@@ -582,7 +610,7 @@ a {
 
       p {
         font-size: 1rem;
-        line-height: 1.5rem;
+        line-height: 1.3rem;
         margin: 4px;
       }
 
@@ -605,7 +633,7 @@ a {
       width: 100%;
     }
     h2 {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
 
     .card {
@@ -631,6 +659,8 @@ a {
 @media only screen and (max-width: 992px) {
   .navbar {
     padding: 0.5rem;
+    padding-top: 0;
+    height: 50px;
     align-items: center;
 
     .logo {
@@ -643,6 +673,12 @@ a {
 
     .menu {
       display: block;
+    }
+  }
+  
+  .home {
+    .image {
+      height: 40%;
     }
   }
 

@@ -11,6 +11,7 @@
     "vite": "^2.3.5"
   },
   "dependencies": {
-    "@types/grecaptcha": "^3.0.2"
+    "@types/grecaptcha": "^3.0.2",
+    "animejs": "^3.2.1"
   }
 }

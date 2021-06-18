@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@types/grecaptcha/-/grecaptcha-3.0.2.tgz#9c903d11b5d2bbf2670099c43c8986bf73bf44dd"
   integrity sha512-KMuF6aFT5mradNvxs1Lv1D7c+H5InmUeR+gscpoyaz16GnJY4NmzWBlyNr66mj20U/QS2MR+/WPxuYH6bdJATA==
 
+animejs@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.2.1.tgz#de9fe2e792f44a777a7fdf6ae160e26604b0cdda"
+  integrity sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==
+
 anymatch@~3.1.1:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/anymatch/-/anymatch-3.1.2.tgz#c0557c096af32f106198f4f4e2a383537e378716"

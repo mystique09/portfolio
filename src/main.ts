@@ -1,9 +1,11 @@
 import './sass-style.scss'
 import Alert from './alert';
+import anime from 'animejs/lib/anime.es.js'
 
 const menu = document.querySelector<HTMLDivElement>('.menu')!;
 const mobileNav = document.querySelector<HTMLDivElement>('.nav-mobile-modal')!;
 const closeNavModal = document.querySelector<HTMLDivElement>('.nav-mobile-modal > .close')!;
+const uLinks = document.querySelectorAll('.nav-mobile-modal > ul > li');
 
 menu.onclick = function(){
   mobileNav.classList.remove('hidden');
@@ -13,13 +15,26 @@ closeNavModal.onclick = function(){
   mobileNav.classList.add('hidden');
 }
 
+uLinks.forEach((link)=>{
+  link.onclick = function(){
+    mobileNav.classList.add('hidden');
+  }
+});
+
 /* Alerts */
+
+function animateAlert(alert){
+  alert.classList.remove('hidden');
+  setTimeout(()=> alert.classList.add('hidden'), 3000);
+  return;
+}
+
 const alertError = new Alert('Unable to send message.', false).create();
-const captchaError = new Alert('Complete the captcha first!', false).create();
+const requiredError = new Alert('Required Fields!', false).create();
 const alertSuccess = new Alert('Message received!', true).create();
 
-document.body.appendChild(captchaError);
 document.body.appendChild(alertError);
+document.body.appendChild(requiredError);
 document.body.appendChild(alertSuccess);
 
 /*contact form*/
@@ -36,9 +51,8 @@ submitBtn.addEventListener('click', function(e?: any){
   const message: string = (<HTMLTextAreaElement>document.getElementById('message')!).value;
   const captchaResponse = grecaptcha.getResponse();
   
-  if(!captchaResponse){
-    captchaError.classList.remove('hidden');
-    setTimeout(()=> captchaError.classList.add('hidden'), 3000);
+  if(!captchaResponse || !email || !firstName || !message){
+    animateAlert(requiredError);
     return;
   }
 
@@ -58,19 +72,18 @@ submitBtn.addEventListener('click', function(e?: any){
       })
     }).then((response?: any) => {
       if(response.statusText === "OK"){
-        alertSuccess.classList.remove('hidden');
-        setTimeout(()=> alertSuccess.classList.add('hidden'), 3000);
+        animateAlert(alertSuccess);
         setTimeout(()=> location.reload(), 3000);
         return;
       }
-      alertError.classList.remove('hidden');
-      setTimeout(()=> alertError.classList.add('hidden'), 3000);
+      animateAlert(alertError);
       setTimeout(()=> location.reload(), 3000);
       return;
     }).catch(() => {
-      alertError.classList.remove('hidden');
-      setTimeout(()=> alertError.classList.add('hidden'), 3000);
+      animateAlert(alertError);
       setTimeout(()=> location.reload(), 3000);
       return;
     });
 });
+
+/*  ANIMEJS AJIMATIONS */
