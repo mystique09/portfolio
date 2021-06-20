@@ -102,7 +102,7 @@ a {
 }
 
 #app {
-  max-width: 1240px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -679,6 +679,7 @@ a {
   .home {
     .image {
       height: 40%;
+      width: 100%;
     }
   }
 
@@ -720,10 +721,30 @@ a {
   }
 }
 
-/* extra large (lwrge desktops) */
+/* extra large (large desktops) */
 
-@media only screen and (max-width: 1200px) {}
+@media only screen and (max-width: 1200px) {
+  .home {
+    .image {
+      height: 450px;
+      width: 100%;
+    }
+  }
+}
 
 /* extra extra large (larger desktops) */
 
-@media only screen and (max-width: 1400px) {}
+@media only screen and (max-width: 1400px) {
+  
+}
+
+@media only screen and(min-width: 1400px) {
+  .home {
+    justify-content: space-evenly;
+    .image {
+      width: 50%;
+      height: 450px;
+      max-width: none;
+    }
+  }
+}

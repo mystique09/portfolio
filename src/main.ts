@@ -1,6 +1,5 @@
 import './sass-style.scss'
 import Alert from './alert';
-import anime from 'animejs/lib/anime.es.js'
 
 const menu = document.querySelector<HTMLDivElement>('.menu')!;
 const mobileNav = document.querySelector<HTMLDivElement>('.nav-mobile-modal')!;
@@ -15,7 +14,7 @@ closeNavModal.onclick = function(){
   mobileNav.classList.add('hidden');
 }
 
-uLinks.forEach((link)=>{
+uLinks.forEach((link: HTMLLinkElement)=>{
   link.onclick = function(){
     mobileNav.classList.add('hidden');
   }
