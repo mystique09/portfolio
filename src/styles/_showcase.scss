@@ -1,0 +1,119 @@
+.showcase {
+  //background: linear-gradient(170deg, #181616, #2e2d2d);
+  overflow: hidden;
+  padding: 3rem 1rem;
+
+  .skills {
+    align-items: center;
+    background: #eaeaea;
+    padding: 2rem;
+    width: 40%;
+    max-width: 720px;
+    margin: 0 auto;
+
+    h3 {
+      font-size: 3rem;
+      color: $dark;
+      letter-spacing: 1px;
+    }
+
+    ul {
+      font-size: 2rem;
+      padding: 2rem;
+      gap: 1rem;
+    }
+  }
+  .contact-me {
+    background: $dark;
+    width: 60%;
+    max-width: 720px;
+    margin: 0 auto;
+
+    .wrapper {
+      padding: 2rem;
+
+      h3 {
+        font-size: 3rem;
+        color: $light;
+        text-align: center;
+        padding: 0;
+        letter-spacing: 1px;
+      }
+
+      form {
+        align-self: center;
+
+        div .input {
+          gap:20px;
+          border-radius: 120px;
+          background: white;
+          padding: 5px 20px;
+          width: 80%;
+          align-items: center;
+          margin: 0 auto;
+          margin-bottom: 10px;
+
+          span {
+            text-align: center;
+            margin-left: 0;
+            margin-right: 0;
+            font-size: 1rem;
+          }
+
+          input {
+            width: 100%;
+            border: none;
+            padding: 5px;
+            font-size: 1rem;
+            margin-right: auto;
+            font-weight: 700;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+        .message {
+          border-radius: 8px;
+          resize: none;
+          padding: 10px;
+          font-size: 0.8rem;
+          font-weight: 700;
+          width: 90%;
+          margin: 0 auto;
+          border: none;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .submit-btn {
+          margin: 10px;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+          .submit {
+            padding: 15px 50px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            font-weight: 700;
+            background: $primary;
+            color: $light;
+            transition: 0.3s;
+
+            &:hover {
+              cursor: pointer;
+              background: $light;
+              color: $dark;
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

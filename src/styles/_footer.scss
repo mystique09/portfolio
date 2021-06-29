@@ -1,0 +1,34 @@
+
+
+.footer {
+  padding: 0.4rem;
+  margin: 0 auto;
+  align-self: center;
+  justify-content: space-between;
+  max-width: 1240px;
+  align-items: center;
+
+  h2 {
+    font-size: 1rem;
+    color: $dark;
+    flex: 4;
+    letter-spacing: 3px;
+  }
+
+  ul {
+    justify-content: space-around;
+    align-items: center;
+    flex: 2;
+    //padding-right: 8px;
+
+    li {
+      a {
+        color: $dark;
+        letter-spacing: 3px;
+        font-weight: 500;
+        gap: 6px;
+        font-size: 1rem;
+      }
+    }
+  }
+}
