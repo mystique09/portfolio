@@ -5,7 +5,7 @@
 
   .skills {
     align-items: center;
-    background: #eaeaea;
+    background: $light;
     padding: 2rem;
     width: 40%;
     max-width: 720px;
@@ -24,7 +24,7 @@
     }
   }
   .contact-me {
-    background: $dark;
+    background: #1b2131;
     width: 60%;
     max-width: 720px;
     margin: 0 auto;
@@ -46,7 +46,7 @@
         div .input {
           gap:20px;
           border-radius: 120px;
-          background: white;
+          background: $light;
           padding: 5px 20px;
           width: 80%;
           align-items: center;
@@ -67,6 +67,7 @@
             font-size: 1rem;
             margin-right: auto;
             font-weight: 700;
+            background: $light;
 
             &:focus {
               outline: none;
@@ -83,6 +84,7 @@
           width: 90%;
           margin: 0 auto;
           border: none;
+          background: $light;
 
           &:focus {
             outline: none;
@@ -101,7 +103,7 @@
             outline: none;
             font-size: 1rem;
             font-weight: 700;
-            background: $primary;
+            background: $button;
             color: $light;
             transition: 0.3s;
 

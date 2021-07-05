@@ -7,10 +7,12 @@
   justify-content: space-between;
   max-width: 1240px;
   align-items: center;
+  background: none;
+  height: 70px;
 
   h2 {
     font-size: 1rem;
-    color: $dark;
+    color: #ffffff;
     flex: 4;
     letter-spacing: 3px;
   }
@@ -22,8 +24,12 @@
     //padding-right: 8px;
 
     li {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
       a {
-        color: $dark;
+        color: $light;
         letter-spacing: 3px;
         font-weight: 500;
         gap: 6px;

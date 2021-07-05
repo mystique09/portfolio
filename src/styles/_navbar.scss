@@ -5,10 +5,12 @@
   justify-content: space-between;
   padding: 0.5rem;
   height: 70px;
+  background: none;
 
   h1 {
     font-size: 1rem;
     letter-spacing: 2px;
+    color: $light;
   }
 
   .links {
@@ -22,6 +24,7 @@
       letter-spacing: 2px;
       font-size: 1rem;
       transition: cubic-bezier(0.39, 0.575, 0.565, 1);
+      color: #c7c3c3;
 
       &:hover {
         color: $primary;
@@ -32,5 +35,6 @@
 
   .menu {
     font-size: 1.5rem;
+    color: $light;
   }
 }

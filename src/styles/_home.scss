@@ -3,10 +3,9 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 2rem;
-  background: $light;
+  background: $dark;
   max-width: 12400px;
   height: 100vh;
-  /*gap: 1rem;*/
 
   .para {
     width: 50%;
@@ -15,14 +14,14 @@
 
     h2 {
       font-size: 2rem;
-      color: $dark;
+      color: $light;
       letter-spacing: 3px;
     }
 
     p {
       font-size: 1.2rem;
       font-weight: 500;
-      color: #383737;
+      color: $secondary;
       line-height: 1.5rem;
       letter-spacing: 2px;
       max-width: 450px;
@@ -34,18 +33,18 @@
       margin-top: 2rem;
 
       a {
-        background: $dark;
-        color: $light;
-        box-shadow: -5px 5px 10px rgba(255,255,255,0.3);
+        background: $light;
+        color: $dark;
+        box-shadow: -5px 5px 10px rgba(77, 76, 76, 0.3);
         font-weight: 500;
         font-size: 1rem;
         border-radius: 2px;
-        transition: 0.3s;
+        transition: 0.2s;
 
         &:hover {
           background: $primary;
           color: $light;
-          transition: 0.3s;
+          transition: 0.2s;
         }
       }
     }

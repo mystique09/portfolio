@@ -1,12 +1,14 @@
 
 .projects {
   padding-bottom: 3rem;
+  background: $dark;
 
   h2 {
     margin-top: 5rem;
     font-size: 4rem;
     text-align: center;
     letter-spacing: 3px;
+    color: $light;
   }
 
   .list {
@@ -18,7 +20,7 @@
     justify-content: center;
 
     .card {
-      background: rgba(0,0,0,10);
+      background: $dark;
       //height: 400px;
       box-shadow: -5px 5px 5px rgba(0,0,0,0.5);
       width: 300px;
