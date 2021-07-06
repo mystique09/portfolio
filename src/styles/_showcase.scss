@@ -5,7 +5,7 @@
 
   .skills {
     align-items: center;
-    background: $light;
+    background: $primary;
     padding: 2rem;
     width: 40%;
     max-width: 720px;
@@ -13,7 +13,7 @@
 
     h3 {
       font-size: 3rem;
-      color: $dark;
+      color: $pure;
       letter-spacing: 1px;
     }
 
@@ -21,10 +21,14 @@
       font-size: 2rem;
       padding: 2rem;
       gap: 1rem;
+      
+      .fa, .fab, .fas {
+        color: $pure;
+      }
     }
   }
   .contact-me {
-    background: #1b2131;
+    background: linear-gradient(360deg, $dark,$primary, $dark);
     width: 60%;
     max-width: 720px;
     margin: 0 auto;
@@ -34,7 +38,7 @@
 
       h3 {
         font-size: 3rem;
-        color: $light;
+        color: $pure;
         text-align: center;
         padding: 0;
         letter-spacing: 1px;
@@ -44,14 +48,15 @@
         align-self: center;
 
         div .input {
-          gap:20px;
-          border-radius: 120px;
-          background: $light;
+          gap: 20px;
+          border-radius: 4px;
+          background: $pure;
           padding: 5px 20px;
           width: 80%;
           align-items: center;
           margin: 0 auto;
           margin-bottom: 10px;
+          min-width: 300px;
 
           span {
             text-align: center;
@@ -67,7 +72,7 @@
             font-size: 1rem;
             margin-right: auto;
             font-weight: 700;
-            background: $light;
+            background: $pure;
 
             &:focus {
               outline: none;
@@ -76,7 +81,7 @@
         }
 
         .message {
-          border-radius: 8px;
+          border-radius: 4px;
           resize: none;
           padding: 10px;
           font-size: 0.8rem;
@@ -84,7 +89,8 @@
           width: 90%;
           margin: 0 auto;
           border: none;
-          background: $light;
+          background: $pure;
+          min-width: 300px;
 
           &:focus {
             outline: none;
@@ -103,13 +109,13 @@
             outline: none;
             font-size: 1rem;
             font-weight: 700;
-            background: $button;
-            color: $light;
+            background: $pure;
+            color: $primary;
             transition: 0.3s;
 
             &:hover {
               cursor: pointer;
-              background: $light;
+              background: $pure;
               color: $dark;
               transition: 0.3s;
             }

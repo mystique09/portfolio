@@ -13,9 +13,11 @@
     padding: 1rem;
 
     h2 {
-      font-size: 2rem;
-      color: $light;
-      letter-spacing: 3px;
+      font-size: 4rem;
+      font-weight: 700;
+      color: $pure;
+      letter-spacing: 2px;
+      text-align: center;
     }
 
     p {
@@ -33,7 +35,7 @@
       margin-top: 2rem;
 
       a {
-        background: $light;
+        background: $pure;
         color: $dark;
         box-shadow: -5px 5px 10px rgba(77, 76, 76, 0.3);
         font-weight: 500;
@@ -43,7 +45,7 @@
 
         &:hover {
           background: $primary;
-          color: $light;
+          color: $pure;
           transition: 0.2s;
         }
       }
@@ -56,7 +58,7 @@
     height: 350px;
     border-radius: 8px;
     overflow: hidden;
-    background: white;
+    background: linear-gradient(360deg, $primary, $pure, $pure);
 
     img {
       width: 100%;

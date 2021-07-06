@@ -8,7 +8,7 @@
     font-size: 4rem;
     text-align: center;
     letter-spacing: 3px;
-    color: $light;
+    color: $pure;
   }
 
   .list {
@@ -20,7 +20,7 @@
     justify-content: center;
 
     .card {
-      background: $dark;
+      background: linear-gradient(180deg, $pure, $pure, $primary, $dark);
       //height: 400px;
       box-shadow: -5px 5px 5px rgba(0,0,0,0.5);
       width: 300px;
@@ -44,7 +44,7 @@
         padding: 1rem;
 
         h3 {
-          color: $light;
+          color: $pure;
           letter-spacing: 3px;
           text-align: center;
           margin: 0;
@@ -68,14 +68,13 @@
           justify-content: center;
 
           & > * {
-            color: $light;
-            border: 1px solid $light;
+            color: $pure;
+            border: 1px solid $pure;
             padding: 6px 19px;
             font-size: 0.8rem;
             font-weight: 700;
             letter-spacing: 2px;
             text-align: center;
-            border-radius: 4px;
           }
         }
       }

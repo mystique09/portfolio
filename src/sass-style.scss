@@ -6,6 +6,7 @@ $heading: rgb(41,64,227);
 $button: $heading;
 $dark: #0d1323;
 $light: #bdbdbd;
+$pure: #f1f1f1;
 
 html {
   scroll-behavior: smooth;
@@ -22,7 +23,7 @@ body {
 * {
   font-family: 'Poppins', sans-serif;
   box-sizing: inherit;
-  
+
   &:before, &:after {
     box-sizing: inherit;
   }
@@ -127,7 +128,8 @@ a {
 @import 'styles/_showcase';
 @import 'styles/_footer';
 @import 'styles/_nav-mobile';
-@import 'styles/mixins';
+@import 'styles/_mixins';
+@import 'styles/_alert';
 
 .about {
   height: 100vh;
@@ -207,7 +209,6 @@ a {
   .contact-me-modal form {
     width: 100%;
   }
-
 }
 
 /* large (desktops) */
