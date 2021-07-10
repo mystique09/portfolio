@@ -11,13 +11,14 @@
     width: 50%;
     align-items: flex-start;
     padding: 1rem;
+    min-width: 250px;
 
     h2 {
       font-size: 4rem;
       font-weight: 700;
       color: $pure;
       letter-spacing: 2px;
-      text-align: center;
+      text-align: left;
     }
 
     p {
@@ -35,8 +36,8 @@
       margin-top: 2rem;
 
       a {
-        background: $pure;
-        color: $dark;
+        background: $heading;
+        color: $pure;
         box-shadow: -5px 5px 10px rgba(77, 76, 76, 0.3);
         font-weight: 500;
         font-size: 1rem;
@@ -44,8 +45,8 @@
         transition: 0.2s;
 
         &:hover {
-          background: $primary;
-          color: $pure;
+          background: $pure;
+          color: $primary;
           transition: 0.2s;
         }
       }
@@ -58,14 +59,14 @@
     height: 350px;
     border-radius: 8px;
     overflow: hidden;
-    background: linear-gradient(360deg, $primary, $pure, $pure);
+    //background: linear-gradient(360deg, $primary, $pure, $pure);
 
     img {
       width: 100%;
       height: 100%;
       background-size: cover;
       background-repeat: no-repeat;
-      mix-blend-mode: multiply;
+      //mix-blend-mode: multiply;
     }
   }
 }

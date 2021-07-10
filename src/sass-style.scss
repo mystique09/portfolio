@@ -131,10 +131,6 @@ a {
 @import 'styles/_mixins';
 @import 'styles/_alert';
 
-.about {
-  height: 100vh;
-}
-
 /* MEDIA QUERIES */
 
 /* extra extra small */
@@ -234,8 +230,10 @@ a {
   }
 
   .home {
+    align-items: center;
+    justify-content: flex-start;
     .image {
-      height: 40%;
+      height: 100%;
       width: 100%;
     }
   }
