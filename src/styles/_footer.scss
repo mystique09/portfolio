@@ -1,40 +1,61 @@
-
-
 .footer {
   padding: 0.4rem;
   margin: 0 auto;
-  align-self: center;
+  align-self: flex-start;
   justify-content: space-between;
   max-width: 1240px;
   align-items: center;
-  background: none;
-  height: 70px;
+  //background: #0e1425;
 
   h2 {
     font-size: 1rem;
     color: #ffffff;
     flex: 4;
     letter-spacing: 3px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
 
   ul {
-    justify-content: space-around;
-    align-items: center;
-    flex: 2;
-    //padding-right: 8px;
+    text-align: left;
+    align-self: flex-start;
 
-    li {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      a {
-        color: $pure;
-        letter-spacing: 3px;
-        font-weight: 500;
-        gap: 6px;
-        font-size: 1rem;
-      }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 5px;
+      height: 100%;
+      background: $button;
+      left: 20px;
+      border-radius: 5px 0 0 5px;
+    }
+
+    li:hover > a {
+      color: $pure;
     }
   }
+
+  a {
+    color: $secondary;
+    font-size: 1rem;
+  }
+
+  h4 {
+    color: $pure;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .copy {
+    color: $para;
+    font-size: 0.8rem;
+  }
+
 }

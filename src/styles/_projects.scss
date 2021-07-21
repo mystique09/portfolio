@@ -5,10 +5,11 @@
 
   h2 {
     margin-top: 5rem;
-    font-size: 4rem;
+    font-size: 2rem;
     text-align: center;
     letter-spacing: 3px;
     color: $pure;
+    position: relative;
   }
 
   .list {
@@ -20,7 +21,7 @@
     justify-content: center;
 
     .card {
-      background: linear-gradient(180deg, $pure, $pure, $primary, $dark);
+      background: linear-gradient(180deg, $pure, #070b17, $dark);
       //height: 400px;
       box-shadow: -5px 5px 5px rgba(0,0,0,0.5);
       width: 300px;
@@ -52,7 +53,7 @@
         }
 
         p {
-          color: $secondary;
+          color: $para;
           letter-spacing: 2px;
           height: 60px;
           margin-top: 20px;

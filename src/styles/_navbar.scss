@@ -22,12 +22,12 @@
       padding: 1rem;
       font-weight: 500;
       letter-spacing: 2px;
-      font-size: 1rem;
+      font-size: 0.8rem;
       transition: cubic-bezier(0.39, 0.575, 0.565, 1);
-      color: #c7c3c3;
+      color: $para;
 
       &:hover {
-        color: $primary;
+        color: $pure;
         transition: 0.3s;
       }
     }

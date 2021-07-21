@@ -5,7 +5,7 @@
 
   .skills {
     align-items: center;
-    background: $primary;
+    background: #070b17;
     padding: 2rem;
     width: 40%;
     max-width: 720px;
@@ -28,7 +28,7 @@
     }
   }
   .contact-me {
-    background: linear-gradient(360deg, $dark,$primary, $dark);
+    background: none;
     width: 60%;
     max-width: 720px;
     margin: 0 auto;
@@ -86,7 +86,7 @@
           padding: 10px;
           font-size: 0.8rem;
           font-weight: 700;
-          width: 90%;
+          width: 80%;
           margin: 0 auto;
           border: none;
           background: $pure;
@@ -99,7 +99,7 @@
 
         .submit-btn {
           margin: 10px;
-          align-items: center;
+          align-items: flex-end;
           justify-content: space-between;
           flex-wrap: wrap;
 
@@ -109,9 +109,9 @@
             outline: none;
             font-size: 1rem;
             font-weight: 700;
-            background: $pure;
-            color: $primary;
-            transition: 0.3s;
+            background: $button;
+            color: $pure;
+            transition: 0.1s;
 
             &:hover {
               cursor: pointer;

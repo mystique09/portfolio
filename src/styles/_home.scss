@@ -19,12 +19,23 @@
       color: $pure;
       letter-spacing: 2px;
       text-align: left;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 90%;
+        left: -20px;
+        top: 20px;
+        background: $heading;
+      }
     }
 
     p {
       font-size: 1.2rem;
       font-weight: 500;
-      color: $secondary;
+      color: $para;
       line-height: 1.5rem;
       letter-spacing: 2px;
       max-width: 450px;
@@ -38,7 +49,6 @@
       a {
         background: $heading;
         color: $pure;
-        box-shadow: -5px 5px 10px rgba(77, 76, 76, 0.3);
         font-weight: 500;
         font-size: 1rem;
         border-radius: 2px;
